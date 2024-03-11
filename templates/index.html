@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    {{ bootstrap.load_css() }}
+    <title>What a Joke!</title>
+</head>
+
+<body>
+
+    <div class="pt-4 pb-4 text-center bg-primary-subtle">
+        <h1>What a Joke!</h1>
+    </div>
+
+    <div class="pt-5 mx-5 text-center">
+        <h3>
+            What a Joke! is a service website where you can receive your daily dose of joke.
+            Simply enter your e-mail below, and we will send you a joke every day at 7pm.
+        </h3>
+    </div>
+
+    <div class="text-center pt-5">
+        <h5>Yes I want my daily dose of joke, please!</h5>
+        <form action="{{ url_for('register') }}" method="POST">
+            <input type="text" name="email" placeholder="Enter your e-mail">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
